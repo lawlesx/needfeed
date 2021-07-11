@@ -9,8 +9,11 @@ const Food = () => {
 
   const router = useRouter();
 
-  const onClickHandler = () => {
-    router.push('/')
+  const onClickHandler = (data) => {
+    router.push({
+      pathname: '/details',
+      query : data
+    })
   }
 
   return ( 
@@ -22,7 +25,7 @@ const Food = () => {
       <div className={styles.right}>
           
           {options.map((option)=>(
-            <button key={option.id} onClick={onClickHandler} className={styles.options}> 
+            <button key={option.id} onClick={() =>onClickHandler(option)} className={styles.options}> 
               <h1>{option.qty}</h1>
               <p>{option.abt}</p>
             </button>

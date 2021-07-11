@@ -15,20 +15,23 @@ const formSchema = yup.object({
 const Details = () => {
 
   const router = useRouter();
+  const { query } = router;
+  let data = {}
 
   return ( 
     <div className={styles.container}>
       <div className="info">
         <div className={styles.left}>
           <h1>Tell us Some Important Details about you</h1>
-          <button className='button' onClick={ () => router.push('/')}>Go Back</button>
+          <button className='button' onClick={ () => router.back()}>Go Back</button>
         </div>
       </div>
       <Formik
         initialValues={{name: '', email: '', phoneNo: '', address: ''}}
         validationSchema={formSchema}
         onSubmit={(values) => {
-          console.log(values);
+          data = {...values,quantity: query.qty}
+          router.push('/thanks')
         }}
       >
         {(props) => (

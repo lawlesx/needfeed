@@ -23,7 +23,7 @@ export default function Home() {
         <h1>Let me tell you that you can now Feed the Needed</h1>
         <p>Donate surplus food and we will redirect the food to those who need.</p>
       </div>
-      <button className='button' onClick={ () => router.push('/details')}>Donate Food</button>
+      <button className='Bigbutton' onClick={ () => router.push('/food')}>Donate Food</button>
     </div>
   )
 }

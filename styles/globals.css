@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Poppins', sans-serif;
 }
 
-.button {
+.button , .Bigbutton {
   width: 20rem;
   height: 5rem;
   background: #D3D3D3;
@@ -47,4 +47,26 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   cursor: pointer;
+}
+
+.Bigbutton {
+  height: 20rem;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks h1{
+  font-size: 5rem;
+}
+
+.thanks p{
+  font-size:3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
